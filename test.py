@@ -1,4 +1,4 @@
-from cyepanet import enopen, ensolveH, enclose
+from cyepanet import enopen, ensolveH, ensaveinpfile, ensolveQ, enreport, enclose
 import time
 
 
@@ -16,10 +16,9 @@ newinpfile = "/Users/markwilson/Dropbox/epanet sample files/new_Bountiful small 
 
 print enopen(inpfile, rptfile, outfile)
 print ensolveH()
-# print ensaveinpfile(newinpfile)
-# print pygetflowunits()
-# print ensolveQ()
-# print enreport()
+print ensaveinpfile(newinpfile)
+print ensolveQ()
+print enreport()
 print enclose()
 
 print
