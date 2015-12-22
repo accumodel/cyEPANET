@@ -134,34 +134,36 @@
 
 // --- define WINDOWS
 
-#undef WINDOWS
-#ifdef _WIN32
-  #define WINDOWS
-#endif
-#ifdef __WIN32__
-  #define WINDOWS
-#endif
+//#undef WINDOWS
+//#ifdef _WIN32
+//  #define WINDOWS
+//#endif
+//#ifdef __WIN32__
+//  #define WINDOWS
+//#endif
+//
+//// --- define DLLEXPORT
+//
+//#ifdef WINDOWS
+//  #ifdef __cplusplus
+//  #define DLLEXPORT extern "C" __declspec(dllexport) __stdcall
+//  #else
+//  #define DLLEXPORT __declspec(dllexport) __stdcall
+//  #endif
+//#else
+//  #ifdef __cplusplus
+//  #define DLLEXPORT extern "C"
+//  #else
+//  #define DLLEXPORT
+//  #endif
+//#endif
 
-// --- define DLLEXPORT
-
-#ifdef WINDOWS
-  #ifdef __cplusplus
-  #define DLLEXPORT extern "C" __declspec(dllexport) __stdcall
-  #else
-  #define DLLEXPORT __declspec(dllexport) __stdcall
-  #endif
-#else
-  #ifdef __cplusplus
-  #define DLLEXPORT extern "C"
-  #else
-  #define DLLEXPORT
-  #endif
-#endif
+#define DLLEXPORT   //MJW
 
 
 // --- declare the EPANET toolkit functions
 
- int   DLLEXPORT ENepanet(char *, char *, char *, void (*) (char *));
+ int   DLLEXPORT ENepanet(char *, char *, char *);
  int   DLLEXPORT ENopen(char *, char *, char *);
  int   DLLEXPORT ENsaveinpfile(char *);
  int   DLLEXPORT ENclose(void);

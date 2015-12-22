@@ -17,19 +17,21 @@ AUTHOR:     L. Rossman
 
 // --- Define DLLEXPORT
 
-#ifdef DLL
-  #ifdef __cplusplus
-  #define DLLEXPORT extern "C" __declspec(dllexport) __stdcall
-  #else
-  #define DLLEXPORT __declspec(dllexport) __stdcall
-  #endif
-#else
-  #ifdef __cplusplus
-  #define DLLEXPORT extern "C"
-  #else
-  #define DLLEXPORT
-  #endif
-#endif
+//#ifdef DLL
+//  #ifdef __cplusplus
+//  #define DLLEXPORT extern "C" __declspec(dllexport) __stdcall
+//  #else
+//  #define DLLEXPORT __declspec(dllexport) __stdcall
+//  #endif
+//#else
+//  #ifdef __cplusplus
+//  #define DLLEXPORT extern "C"
+//  #else
+//  #define DLLEXPORT
+//  #endif
+//#endif
+
+#define DLLEXPORT  //MJW
 
 // --- Define the EPANET toolkit constants
 
@@ -156,7 +158,7 @@ AUTHOR:     L. Rossman
 
 // --- Declare the EPANET toolkit functions
 
- int  DLLEXPORT ENepanet(char *, char *, char *, void (*) (char *));
+ int  DLLEXPORT ENepanet(char *, char *, char *);
 
  int  DLLEXPORT ENopen(char *, char *, char *);
  int  DLLEXPORT ENsaveinpfile(char *);

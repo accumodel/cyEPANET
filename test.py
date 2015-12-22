@@ -16,7 +16,6 @@ newinpfile = "/Users/markwilson/Dropbox/epanet sample files/new_Bountiful small 
 
 print enopen(inpfile, rptfile, outfile)
 print ensolveH()
-printH()
 # print ensaveinpfile(newinpfile)
 # print pygetflowunits()
 # print ensolveQ()

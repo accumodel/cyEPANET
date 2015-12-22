@@ -1,6 +1,6 @@
 # expose the EPANET toolkit api to cython as the cython api
 
-cdef extern from "lib/epanet2.h":
+cdef extern from "lib/toolkit.h":
     int ENepanet(char *, char *, char *)
     int ENopen(char *, char *, char *)
     int ENsaveinpfile(char *)

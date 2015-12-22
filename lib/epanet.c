@@ -110,7 +110,7 @@ execute function x and set the error code equal to its return value.
 /*** New compile directives ***/                                               //(2.00.11 - LR)
 //#define CLE     /* Compile as a command line executable */
 //#define SOL     /* Compile as a shared object library */
-#define DLL       /* Compile as a Windows DLL */
+//#define DLL       /* Compile as a Windows DLL */
 
 /*** Following lines are deprecated ***/                                       //(2.00.11 - LR)
 //#ifdef DLL
@@ -120,19 +120,19 @@ execute function x and set the error code equal to its return value.
 
 /*** Need to define WINDOWS to use the getTmpName function ***/                //(2.00.12 - LR)
 // --- define WINDOWS
-#undef WINDOWS
-#ifdef _WIN32
-  #define WINDOWS
-#endif
-#ifdef __WIN32__
-  #define WINDOWS
-#endif
+//#undef WINDOWS
+//#ifdef _WIN32
+//  #define WINDOWS
+//#endif
+//#ifdef __WIN32__
+//  #define WINDOWS
+//#endif
 /************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <malloc.h>
+//#include <malloc.h>    //<MJW
 #include <math.h>
 #include <float.h>                                                             //(2.00.12 - LR)
 #include "hash.h"    
@@ -220,7 +220,7 @@ int   main(int argc, char *argv[])
 
 
 /*** updated 3/1/01 ***/
-int DLLEXPORT ENepanet(char *f1, char *f2, char *f3, void (*pviewprog) (char *))
+int DLLEXPORT ENepanet(char *f1, char *f2, char *f3)
 
 /*------------------------------------------------------------------------
 **   Input:   f1 = pointer to name of input file              
@@ -241,7 +241,7 @@ int DLLEXPORT ENepanet(char *f1, char *f2, char *f3, void (*pviewprog) (char *))
 */
 {
     int  errcode = 0;
-    viewprog = pviewprog;
+//    viewprog = pviewprog;
     ERRCODE(ENopen(f1,f2,f3));
     if (Hydflag != USE) ERRCODE(ENsolveH());
     ERRCODE(ENsolveQ());
