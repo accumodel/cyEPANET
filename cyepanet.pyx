@@ -93,6 +93,12 @@ def enwriteline(char *line):
 def enreport():
     return epanet2.ENreport()
 
+cdef extern double *H
+
+def printH(int Nnodes, double *H):
+    for i in range(1,Nnodes+1):
+        print H[i]
+
 
 cdef extern double *H
 
