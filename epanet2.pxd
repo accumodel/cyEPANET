@@ -1,0 +1,68 @@
+# expose the EPANET toolkit api to cython as the cython api
+
+cdef extern from "lib/epanet2.h":
+    int ENepanet(char *, char *, char *)
+    int ENopen(char *, char *, char *)
+    int ENsaveinpfile(char *)
+    int ENclose()
+
+    int ENsolveH()
+    int ENsaveH()
+    int ENopenH()
+    int ENinitH(int)
+    int ENrunH(long *)
+    int ENnextH(long *)
+    int ENcloseH()
+    int ENsavehydfile(char *)
+    int ENusehydfile(char *)
+
+    int ENsolveQ()
+    int ENopenQ()
+    int ENinitQ(int)
+    int ENrunQ(long *)
+    int ENnextQ(long *)
+    int ENstepQ(long *)
+    int ENcloseQ()
+
+    int ENwriteline(char *)
+    int ENreport()
+    # int ENresetreport()
+    # int ENsetreport(char *)
+
+    # int ENgetcontrol(int, int *, int *, float *,
+    #                   int *, float *)
+    # int ENgetcount(int, int *)
+    # int ENgetoption(int, float *)
+    # int ENgettimeparam(int, long *)
+    # int ENgetflowunits(int *)
+    # int PYgetflowunits()
+    # int ENgetpatternindex(char *, int *)
+    # int ENgetpatternid(int, char *)
+    # int ENgetpatternlen(int, int *)
+    # int ENgetpatternvalue(int, int, float *)
+    # int ENgetqualtype(int *, int *)
+    # int ENgeterror(int, char *, int)
+    #
+    # int ENgetnodeindex(char *, int *)
+    # int ENgetnodeid(int, char *)
+    # int ENgetnodetype(int, int *)
+    # int ENgetnodevalue(int, int, float *)
+    #
+    # int ENgetlinkindex(char *, int *)
+    # int ENgetlinkid(int, char *)
+    # int ENgetlinktype(int, int *)
+    # int ENgetlinknodes(int, int *, int *)
+    # int ENgetlinkvalue(int, int, float *)
+    #
+    # int ENgetversion(int *)
+    #
+    # int ENsetcontrol(int, int, int, float, int, float)
+    # int ENsetnodevalue(int, int, float)
+    # int ENsetlinkvalue(int, int, float)
+    # int ENaddpattern(char *)
+    # int ENsetpattern(int, float *, int)
+    # int ENsetpatternvalue(int, int, float)
+    # int ENsettimeparam(int, long)
+    # int ENsetoption(int, float)
+    # int ENsetstatusreport(int)
+    # int ENsetqualtype(int, char *, char *, char *)
