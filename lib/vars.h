@@ -11,6 +11,18 @@ AUTHOR:     L. Rossman
                                                                      
 ************************************************************************
 */
+
+
+//#define EXTERN extern
+//#define MAXFNAME2  259      /* Max. # characters in file name         */
+//#define MAXTITLE2  3        /* Max. # title lines                     */
+//#define MAXID2     31       /* Max. # characters in ID name           */      //(2.00.11 - LR)
+//#define MAXMSG2    79       /* Max. # characters in message text      */
+//#define MAXVAR2   21             /* Max. # types of network variables   *
+
+//#include "types.h"
+//#include "hash.h"
+
 EXTERN FILE     *InFile,               /* Input file pointer           */
                 *OutFile,              /* Output file pointer          */
                 *RptFile,              /* Report file pointer          */

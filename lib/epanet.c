@@ -144,7 +144,7 @@ execute function x and set the error code equal to its return value.
 #include "vars.h"
 #include "toolkit.h"
 
-void (* viewprog) (char *);     /* Pointer to progress viewing function */   
+//void (* viewprog) (char *);     /* Pointer to progress viewing function */   //MJW
 
 
 /*

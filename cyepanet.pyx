@@ -94,17 +94,11 @@ def enreport():
     return epanet2.ENreport()
 
 cdef extern double *H
+cdef extern int Nnodes
 
-def printH(int Nnodes, double *H):
-    for i in range(1,Nnodes+1):
-        print H[i]
-
-
-cdef extern double *H
-
-cdef printH(int Nnodes, double *H):
+def printH():
     cdef int i
     for i in range(1,Nnodes+1):
-        print H[i]
+        print round(H[i], 2)
 
 

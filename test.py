@@ -1,5 +1,5 @@
 
-from cyepanet import enopen, ensolveH, ensaveinpfile, ensolveQ, enreport, enclose
+from cyepanet import enopen, ensolveH, ensaveinpfile, ensolveQ, enreport, enclose, printH
 
 import time
 
@@ -18,6 +18,7 @@ newinpfile = "/Users/markwilson/Dropbox/epanet sample files/new_Bountiful small 
 
 print enopen(inpfile, rptfile, outfile)
 print ensolveH()
+printH()
 print ensaveinpfile(newinpfile)
 print ensolveQ()
 print enreport()
